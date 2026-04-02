@@ -2,13 +2,13 @@
 
 CREATE TABLE Rank (
     rank_id INT AUTO_INCREMENT PRIMARY KEY,
-    rank_name VARCHAR(50),
-    base_salary DECIMAL(10, 2)
+    rank_name VARCHAR(50) NOT NULL,
+    base_salary DECIMAL(10, 2) NOT NULL
 );
 
 CREATE TABLE Specialization (
     specialization_id INT PRIMARY KEY,
-    specialization_name VARCHAR(50)
+    specialization_name VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE Department (
@@ -21,10 +21,10 @@ CREATE TABLE Department (
 
 CREATE TABLE staff (
     staff_id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100),
+    name VARCHAR(100) NOT NULL,
     specialization_id INT,
     department_id INT,
-    email VARCHAR(100),
+    email VARCHAR(100) NOT NULL,
     rank_id INT,
     hire_date DATE,
     CONSTRAINT unique_email UNIQUE (email),
@@ -36,6 +36,7 @@ CREATE TABLE staff (
         FOREIGN KEY (rank_id) REFERENCES Rank(rank_id)
 );
 
+-- Add manager foreign key after staff table creation to avoid circular dependency
 ALTER TABLE Department
 ADD CONSTRAINT fk_department_manager
 FOREIGN KEY (department_manager_id) REFERENCES staff(staff_id);
