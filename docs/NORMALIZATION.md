@@ -74,6 +74,32 @@ This document outlines the step-by-step normalization process of the Constructio
 
 ---
 
+## ER Diagram
+```mermaid
+erDiagram
+    STAFF ||--o| DEPARTMENT : belongs_to
+    STAFF ||--o| RANK : has
+    STAFF ||--o| SPECIALIZATION : has
+    STAFF ||--o{ ASSIGNMENT : participates_in
+    PROJECT ||--o{ ASSIGNMENT : includes
+    STAFF ||--o{ LEAVE_REQUEST : applies_for
+    STAFF ||--o{ PAYROLL : receives
+    STAFF ||--o{ BORROWING_LOG : involved_in
+    PROJECT ||--o{ BORROWING_LOG : related_to
+    DEPARTMENT ||--o{ BORROWING_LOG : from_to
+
+    STAFF {
+        int staff_id
+        string name
+    }
+
+    PROJECT {
+        int project_id
+        string project_name
+    }
+```
+---
+
 ## Summary of Improvements
 1.  **Redundancy Elimination:** Removed repetitive department and rank data, significantly reducing storage and potential for data inconsistency.
 2.  **Anomaly Prevention:** Ensured that updating a department's location or a specialization's coefficient requires only a single record update.
