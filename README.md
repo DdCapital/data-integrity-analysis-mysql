@@ -45,4 +45,4 @@ The system architecture is built on a **3NF (Third Normal Form)** relational mod
 - **ER Diagram**: Integrated via Mermaid.js.
 - **Normalization Process**: Detailed step-by-step derivation from UNF to 3NF.
 
-👉 [View Full Normalization Report & ER Diagram](./docs/NORMALIZATION.md)
+ [View Full Normalization Report & ER Diagram](./docs/NORMALIZATION.md)
