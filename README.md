@@ -37,26 +37,4 @@ This project includes multiple real-world data validation scenarios:
 - queries.sql: analysis and validation queries
 - docs/: additional notes and explanations
 
----
 
-## ER Diagram
-erDiagram
-    STAFF ||--o| DEPARTMENT : &quot;belongs_to&quot;
-    STAFF ||--o| RANK : &quot;has&quot;
-    STAFF ||--o| SPECIALIZATION : &quot;has&quot;
-    STAFF ||--o{ ASSIGNMENT : &quot;participates_in&quot;
-    PROJECT ||--o{ ASSIGNMENT : &quot;includes&quot;
-    STAFF ||--o{ LEAVE_REQUEST : &quot;applies_for&quot;
-    STAFF ||--o{ PAYROLL : &quot;receives&quot;
-    STAFF ||--o{ BORROWING_LOG : &quot;involved_in&quot;
-    PROJECT ||--o{ BORROWING_LOG : &quot;related_to&quot;
-    DEPARTMENT ||--o{ BORROWING_LOG : &quot;from_to&quot;
-
-    STAFF {
-        int staff_id
-        string name
-    }
-    PROJECT {
-        int project_id
-        string project_name
-    }
