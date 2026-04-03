@@ -37,4 +37,12 @@ This project includes multiple real-world data validation scenarios:
 - queries.sql: analysis and validation queries
 - docs/: additional notes and explanations
 
+---
 
+## Database Design
+The system architecture is built on a **3NF (Third Normal Form)** relational model to ensure data integrity. 
+
+- **ER Diagram**: Integrated via Mermaid.js.
+- **Normalization Process**: Detailed step-by-step derivation from UNF to 3NF.
+
+👉 [View Full Normalization Report & ER Diagram](./docs/NORMALIZATION.md)
