@@ -8,11 +8,10 @@ The goal is to ensure accurate resource allocation, prevent data inconsistencies
 ---
 
 ## Key Contributions
-- Designed and implemented a relational database schema using MySQL
-- Applied normalization (up to 3NF) to ensure data consistency and reduce redundancy
-- Enforced data integrity using constraints, foreign keys, and triggers
-- Built SQL queries to validate business rules and detect data inconsistencies
-- Performed discrepancy analysis on staff allocation and project assignments
+- **Schema Design & Normalization:** Engineered a relational database from scratch, applying **3NF normalization** to support complex construction institute operations (6 departments, multiple specializations).
+- **Advanced Data Integrity:** Implemented **Triggers and Constraints** to automate business rule enforcement, such as rank-based project assignment and automated salary/bonus calculations.
+- **Complex Analytical Queries:** Developed multi-table JOINs and subqueries to perform **Discrepancy Analysis**, identifying resource overallocation and cross-department staffing gaps.
+- **Audit & Logging:** Designed an automated logging system using Triggers to track project status transitions, ensuring a full audit trail for project lifecycles.
 
 ---
 
